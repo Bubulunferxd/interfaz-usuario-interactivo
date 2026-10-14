@@ -1,0 +1,161 @@
+import type { Product } from '@/types';
+
+export const tickets: Product[] = [
+  {
+    id: 'ticket-vip',
+    type: 'ticket',
+    name: 'VIP Experience',
+    description: 'Acceso total con los mejores privilegios del evento. Front row, backstage y zona exclusiva.',
+    price: 100,
+    image: 'https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'LIMITADO',
+    perks: [
+      'Accesso front row',
+      'Meet & greet con el artista',
+      'Backstage pass completo',
+      'Open bar premium',
+      'Estacionamiento VIP',
+      'Kit de bienvenida exclusivo',
+    ],
+  },
+  {
+    id: 'ticket-platinum',
+    type: 'ticket',
+    name: 'Platinum Access',
+    description: 'Experiencia premium con asientos preferenciales y zona exclusiva cerca del escenario.',
+    price: 60,
+    image: 'https://images.pexels.com/photos/4218027/pexels-photo-4218027.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'POPULAR',
+    perks: [
+      'Asientos preferenciales',
+      'Zona Platinum exclusiva',
+      'Bebidas incluidas (2)',
+      'Entrada prioritaria',
+      'Merchandising de regalo',
+    ],
+  },
+  {
+    id: 'ticket-general',
+    type: 'ticket',
+    name: 'General Admission',
+    description: 'Acceso general al concierto. Vive la energía del público y disfruta del show completo.',
+    price: 30,
+    image: 'https://images.pexels.com/photos/13230484/pexels-photo-13230484.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    perks: [
+      'Accesso general al venue',
+      'Pista y zonas comunes',
+      'Barras de comida y bebida',
+      'Atmósfera increíble',
+    ],
+  },
+];
+
+export const merch: Product[] = [
+  {
+    id: 'merch-hoodie',
+    type: 'merch',
+    name: 'Sinfronteras Hoodie',
+    description: 'Hoodie exclusivo del tour con logo bordado y acabado premium.',
+    price: 45,
+    image: 'https://images.pexels.com/photos/33624546/pexels-photo-33624546.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    options: ['S', 'M', 'L', 'XL', 'XXL'],
+  },
+  {
+    id: 'merch-tee',
+    type: 'merch',
+    name: 'Tour Edition T-Shirt',
+    description: 'Camiseta edición limitada del concierto con diseño especial.',
+    price: 25,
+    image: 'https://images.pexels.com/photos/16048097/pexels-photo-16048097.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    options: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'merch-tee-black',
+    type: 'merch',
+    name: 'Classic Black Tee',
+    description: 'Camiseta negra clásica con logo minimalista del festival.',
+    price: 22,
+    image: 'https://images.pexels.com/photos/35625406/pexels-photo-35625406.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    options: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'merch-cap',
+    type: 'merch',
+    name: 'Sinfronteras Cap',
+    description: 'Gorra ajustable con bordado del logo oficial del tour.',
+    price: 18,
+    image: 'https://images.pexels.com/photos/29996216/pexels-photo-29996216.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+];
+
+export const food: Product[] = [
+  {
+    id: 'food-burger',
+    type: 'food',
+    name: 'Signature Burger',
+    description: 'Hamburguesa doble con queso cheddar, bacon crujiente y salsa de la casa.',
+    price: 12,
+    image: 'https://images.pexels.com/photos/20003237/pexels-photo-20003237.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+  {
+    id: 'food-fries',
+    type: 'food',
+    name: 'Loaded Fries',
+    description: 'Patatas fritas cargadas con queso, bacon y cebollín crujiente.',
+    price: 7,
+    image: 'https://images.pexels.com/photos/8363976/pexels-photo-8363976.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+  {
+    id: 'food-combo',
+    type: 'food',
+    name: 'Combo Doble',
+    description: 'Dos cheeseburgers con patatas y bebida. Perfecto para compartir.',
+    price: 16,
+    image: 'https://images.pexels.com/photos/36829386/pexels-photo-36829386.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'COMBO',
+  },
+  {
+    id: 'food-plate',
+    type: 'food',
+    name: 'Festival Plate',
+    description: 'Plato completo con hamburguesa, patatas, elote y bebida grande.',
+    price: 14,
+    image: 'https://images.pexels.com/photos/4669251/pexels-photo-4669251.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+];
+
+export const drinks: Product[] = [
+  {
+    id: 'drink-soda',
+    type: 'food',
+    name: 'Soda Mediana',
+    description: 'Refresco bien frio. Coca-Cola, Sprite o Fanta a elegir.',
+    price: 4,
+    image: 'https://images.pexels.com/photos/17650224/pexels-photo-17650224.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+  {
+    id: 'drink-energy',
+    type: 'food',
+    name: 'Energy Drink',
+    description: 'Bebida energetica para aguantar toda la noche con fuerza.',
+    price: 5,
+    image: 'https://images.pexels.com/photos/11942004/pexels-photo-11942004.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+  {
+    id: 'drink-iced',
+    type: 'food',
+    name: 'Iced Tea Refresher',
+    description: 'Te helado con hielo y limon. Perfecto para refrescar el ambiente.',
+    price: 5,
+    image: 'https://images.pexels.com/photos/16716138/pexels-photo-16716138.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  },
+  {
+    id: 'drink-lemonade',
+    type: 'food',
+    name: 'Fresh Lemonade',
+    description: 'Limonada natural con menta y hierbabuena. Sabor tropical.',
+    price: 6,
+    image: 'https://images.pexels.com/photos/3651045/pexels-photo-3651045.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    badge: 'FRESH',
+  },
+];
