@@ -16,7 +16,11 @@ export function Merch() {
   };
 
   return (
+<<<<<<< HEAD
     <section id="merch" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#0a1420]">
+=======
+    <section id="merch" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#0c0c14]">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-cyan-500/5 blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto">
@@ -37,10 +41,17 @@ export function Merch() {
           {merch.map((item, index) => (
             <div
               key={item.id}
+<<<<<<< HEAD
               className={`relative rounded-2xl glass border border-teal-500/8 card-shine hover-glow-cyan overflow-hidden group transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 reveal ${visible ? 'reveal-visible' : ''}`}
               style={{ transitionDelay: `${index * 0.08}s` }}
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-[#0d1a26]">
+=======
+              className={`relative rounded-2xl glass border border-white/8 card-shine hover-glow-cyan overflow-hidden group transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 reveal ${visible ? 'reveal-visible' : ''}`}
+              style={{ transitionDelay: `${index * 0.08}s` }}
+            >
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#1a1a26]">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 <img
                   src={item.image}
                   alt={item.name}

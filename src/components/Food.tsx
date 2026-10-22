@@ -31,10 +31,17 @@ export function Food() {
           {food.map((item, index) => (
             <div
               key={item.id}
+<<<<<<< HEAD
               className={`relative rounded-2xl glass border border-teal-500/8 card-shine hover-glow-orange overflow-hidden group transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 reveal ${visible ? 'reveal-visible' : ''}`}
               style={{ transitionDelay: `${index * 0.08}s` }}
             >
               <div className="relative aspect-square overflow-hidden bg-[#0d1a26]">
+=======
+              className={`relative rounded-2xl glass border border-white/8 card-shine hover-glow-orange overflow-hidden group transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 reveal ${visible ? 'reveal-visible' : ''}`}
+              style={{ transitionDelay: `${index * 0.08}s` }}
+            >
+              <div className="relative aspect-square overflow-hidden bg-[#1a1a26]">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 <img
                   src={item.image}
                   alt={item.name}
@@ -85,10 +92,17 @@ export function Food() {
           {drinks.map((item, index) => (
             <div
               key={item.id}
+<<<<<<< HEAD
               className={`relative rounded-2xl glass border border-teal-500/8 card-shine hover-glow-cyan overflow-hidden group transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 reveal ${visibleDrinks ? 'reveal-visible' : ''}`}
               style={{ transitionDelay: `${index * 0.08}s` }}
             >
               <div className="relative aspect-square overflow-hidden bg-[#0d1a26]">
+=======
+              className={`relative rounded-2xl glass border border-white/8 card-shine hover-glow-cyan overflow-hidden group transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 reveal ${visibleDrinks ? 'reveal-visible' : ''}`}
+              style={{ transitionDelay: `${index * 0.08}s` }}
+            >
+              <div className="relative aspect-square overflow-hidden bg-[#1a1a26]">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 <img
                   src={item.image}
                   alt={item.name}

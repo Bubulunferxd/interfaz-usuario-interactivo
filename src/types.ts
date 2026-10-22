@@ -10,6 +10,7 @@ export interface Product {
   badge?: string;
   perks?: string[];
   options?: string[];
+<<<<<<< HEAD
   zone?: 'vip' | 'platinum' | 'general';
 }
 
@@ -20,6 +21,8 @@ export interface Seat {
   seat_number: number;
   label: string;
   status: 'available' | 'sold';
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 }
 
 export interface CartItem {
@@ -27,7 +30,10 @@ export interface CartItem {
   product: Product;
   quantity: number;
   selectedOption?: string;
+<<<<<<< HEAD
   seats?: Seat[];
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 }
 
 export interface CustomerInfo {

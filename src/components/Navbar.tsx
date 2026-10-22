@@ -38,11 +38,19 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <a href="#" className="flex items-center gap-2 group">
             <div className="relative">
+<<<<<<< HEAD
               <Zap className="w-7 h-7 text-teal-400 group-hover:scale-110 transition-transform" fill="currentColor" />
               <div className="absolute inset-0 blur-md bg-teal-500/40 -z-10" />
             </div>
             <span className="font-display text-xl sm:text-2xl tracking-wider">
               SINFRONTERAS<span className="text-neon-teal animate-neon-flicker">FEST</span>
+=======
+              <Zap className="w-7 h-7 text-amber-500 group-hover:scale-110 transition-transform" fill="currentColor" />
+              <div className="absolute inset-0 blur-md bg-amber-500/40 -z-10" />
+            </div>
+            <span className="font-display text-xl sm:text-2xl tracking-wider">
+              SINFRONTERAS<span className="text-amber-500">FEST</span>
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
             </span>
           </a>
 
@@ -51,10 +59,17 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+<<<<<<< HEAD
                 className="text-sm font-medium text-gray-300 hover:text-teal-400 transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-400 group-hover:w-full transition-all duration-300" />
+=======
+                className="text-sm font-medium text-gray-300 hover:text-amber-500 transition-colors relative group"
+              >
+                {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-300" />
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
               </a>
             ))}
           </div>
@@ -62,14 +77,22 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <button
               onClick={openCart}
+<<<<<<< HEAD
               className={`relative flex items-center gap-2 px-4 py-2 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-400 hover:bg-teal-500/20 transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-teal-500/20 ${
+=======
+              className={`relative flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 hover:bg-amber-500/20 transition-all duration-200 hover:scale-105 ${
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 bump ? 'animate-bounce-in' : ''
               }`}
             >
               <ShoppingCart className="w-5 h-5" />
               <span className="hidden sm:inline text-sm font-semibold">Carrito</span>
               {totalItems > 0 && (
+<<<<<<< HEAD
                 <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full gradient-teal text-white text-xs font-bold flex items-center justify-center animate-pop-in" style={{ boxShadow: '0 0 10px rgba(45, 212, 191, 0.6)' }}>
+=======
+                <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full gradient-amber text-white text-xs font-bold flex items-center justify-center animate-pop-in">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                   {totalItems}
                 </span>
               )}
@@ -92,7 +115,11 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
+<<<<<<< HEAD
                   className="px-4 py-2.5 rounded-lg text-gray-300 hover:bg-teal-500/10 hover:text-teal-400 transition-colors text-sm font-medium"
+=======
+                  className="px-4 py-2.5 rounded-lg text-gray-300 hover:bg-amber-500/10 hover:text-amber-500 transition-colors text-sm font-medium"
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 >
                   {link.label}
                 </a>

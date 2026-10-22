@@ -9,7 +9,10 @@ export const tickets: Product[] = [
     price: 100,
     image: 'https://images.pexels.com/photos/167605/pexels-photo-167605.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     badge: 'LIMITADO',
+<<<<<<< HEAD
     zone: 'vip',
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
     perks: [
       'Accesso front row',
       'Meet & greet con el artista',
@@ -27,7 +30,10 @@ export const tickets: Product[] = [
     price: 60,
     image: 'https://images.pexels.com/photos/4218027/pexels-photo-4218027.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     badge: 'POPULAR',
+<<<<<<< HEAD
     zone: 'platinum',
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
     perks: [
       'Asientos preferenciales',
       'Zona Platinum exclusiva',
@@ -43,7 +49,10 @@ export const tickets: Product[] = [
     description: 'Acceso general al concierto. Vive la energía del público y disfruta del show completo.',
     price: 30,
     image: 'https://images.pexels.com/photos/13230484/pexels-photo-13230484.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+<<<<<<< HEAD
     zone: 'general',
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
     perks: [
       'Accesso general al venue',
       'Pista y zonas comunes',

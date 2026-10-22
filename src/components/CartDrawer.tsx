@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { X, Minus, Plus, Trash2, ShoppingBag, ArrowRight, MessageCircle, Truck, Armchair } from 'lucide-react';
+=======
+import { X, Minus, Plus, Trash2, ShoppingBag, ArrowRight, MessageCircle, Truck } from 'lucide-react';
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 import { useCart } from '@/context/CartContext';
 
 const typeLabels: Record<string, string> = {
@@ -7,7 +11,11 @@ const typeLabels: Record<string, string> = {
   food: 'Comida',
 };
 
+<<<<<<< HEAD
 const WHATSAPP_NUMBER = '+591 63232494';
+=======
+const WHATSAPP_NUMBER = '+591 700 12345';
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 
 export function CartDrawer() {
   const {
@@ -29,10 +37,17 @@ export function CartDrawer() {
         className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-fade-in"
         onClick={closeCart}
       />
+<<<<<<< HEAD
       <div className="relative w-full max-w-md h-full glass-strong border-l border-teal-500/15 flex flex-col animate-slide-in-right">
         <div className="flex items-center justify-between p-5 border-b border-teal-500/15">
           <div className="flex items-center gap-2">
             <ShoppingBag className="w-5 h-5 text-teal-400" />
+=======
+      <div className="relative w-full max-w-md h-full glass-strong border-l border-white/10 flex flex-col animate-slide-in-right">
+        <div className="flex items-center justify-between p-5 border-b border-white/10">
+          <div className="flex items-center gap-2">
+            <ShoppingBag className="w-5 h-5 text-amber-500" />
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
             <h2 className="text-lg font-bold">
               Tu Carrito {totalItems > 0 && `(${totalItems})`}
             </h2>
@@ -54,7 +69,11 @@ export function CartDrawer() {
             <p className="text-sm text-gray-600">Agrega tickets, merch, comida o bebidas para empezar.</p>
             <button
               onClick={closeCart}
+<<<<<<< HEAD
               className="mt-6 px-5 py-2.5 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-400 text-sm font-semibold hover:bg-teal-500/20 transition-colors"
+=======
+              className="mt-6 px-5 py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-500 text-sm font-semibold hover:bg-amber-500/20 transition-colors"
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
             >
               Explorar productos
             </button>
@@ -65,9 +84,15 @@ export function CartDrawer() {
               {items.map((item) => (
                 <div
                   key={item.id}
+<<<<<<< HEAD
                   className="flex gap-3 p-3 rounded-xl bg-white/5 border border-teal-500/5 animate-scale-in"
                 >
                   <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-[#0d1a26]">
+=======
+                  className="flex gap-3 p-3 rounded-xl bg-white/5 border border-white/5 animate-scale-in"
+                >
+                  <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-[#1a1a26]">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                     {item.product.image && (
                       <img
                         src={item.product.image}
@@ -80,13 +105,18 @@ export function CartDrawer() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0">
+<<<<<<< HEAD
                         <p className="text-xs text-teal-400 font-semibold uppercase tracking-wide">
+=======
+                        <p className="text-xs text-amber-500 font-semibold uppercase tracking-wide">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                           {typeLabels[item.product.type]}
                         </p>
                         <h4 className="text-sm font-bold truncate">{item.product.name}</h4>
                         {item.selectedOption && (
                           <p className="text-xs text-gray-500">Talla: {item.selectedOption}</p>
                         )}
+<<<<<<< HEAD
                         {item.seats && item.seats.length > 0 && (
                           <div className="flex items-center gap-1 mt-0.5">
                             <Armchair className="w-3 h-3 text-teal-400" />
@@ -95,6 +125,8 @@ export function CartDrawer() {
                             </p>
                           </div>
                         )}
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                       </div>
                       <button
                         onClick={() => removeFromCart(item.id)}
@@ -105,6 +137,7 @@ export function CartDrawer() {
                     </div>
 
                     <div className="flex items-center justify-between mt-2">
+<<<<<<< HEAD
                       {item.seats ? (
                         <span className="text-xs text-gray-500">{item.seats.length} asiento{item.seats.length !== 1 ? 's' : ''}</span>
                       ) : (
@@ -125,6 +158,24 @@ export function CartDrawer() {
                         </div>
                       )}
                       <span className="font-display text-lg text-teal-400">
+=======
+                      <div className="flex items-center gap-1 bg-black/40 rounded-lg p-0.5">
+                        <button
+                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          className="w-6 h-6 rounded-md flex items-center justify-center text-gray-400 hover:bg-white/10 transition-colors"
+                        >
+                          <Minus className="w-3.5 h-3.5" />
+                        </button>
+                        <span className="w-7 text-center text-sm font-bold">{item.quantity}</span>
+                        <button
+                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          className="w-6 h-6 rounded-md flex items-center justify-center text-gray-400 hover:bg-white/10 transition-colors"
+                        >
+                          <Plus className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                      <span className="font-display text-lg text-amber-500">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                         ${item.product.price * item.quantity}
                       </span>
                     </div>
@@ -151,7 +202,11 @@ export function CartDrawer() {
             {/* WhatsApp contact */}
             <div className="px-4 pb-2">
               <a
+<<<<<<< HEAD
                 href={`https://wa.me/59163232494`}
+=======
+                href={`https://wa.me/59170012345`}
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-xl bg-green-500/5 border border-green-500/15 hover:bg-green-500/10 transition-colors group"
@@ -166,7 +221,11 @@ export function CartDrawer() {
               </a>
             </div>
 
+<<<<<<< HEAD
             <div className="border-t border-teal-500/15 p-5 space-y-3">
+=======
+            <div className="border-t border-white/10 p-5 space-y-3">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
               <div className="flex items-center justify-between text-sm text-gray-400">
                 <span>Subtotal</span>
                 <span>${totalPrice}</span>
@@ -175,15 +234,26 @@ export function CartDrawer() {
                 <span>Cargo por servicio</span>
                 <span className="text-green-400">Gratis</span>
               </div>
+<<<<<<< HEAD
               <div className="h-px bg-teal-500/10" />
               <div className="flex items-center justify-between">
                 <span className="font-bold">Total</span>
                 <span className="font-display text-3xl text-teal-400">${totalPrice}</span>
+=======
+              <div className="h-px bg-white/10" />
+              <div className="flex items-center justify-between">
+                <span className="font-bold">Total</span>
+                <span className="font-display text-3xl text-amber-500">${totalPrice}</span>
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
               </div>
 
               <button
                 onClick={openCheckout}
+<<<<<<< HEAD
                 className="w-full py-4 rounded-xl gradient-teal text-black font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform duration-200 shadow-lg shadow-teal-500/20"
+=======
+                className="w-full py-4 rounded-xl gradient-amber text-black font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform duration-200 shadow-lg shadow-amber-500/20"
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
               >
                 Finalizar compra
                 <ArrowRight className="w-5 h-5" />

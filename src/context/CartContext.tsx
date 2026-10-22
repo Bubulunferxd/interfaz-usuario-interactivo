@@ -1,5 +1,9 @@
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
+<<<<<<< HEAD
 import type { CartItem, Product, CustomerInfo, OrderResult, Seat } from '@/types';
+=======
+import type { CartItem, Product, CustomerInfo, OrderResult } from '@/types';
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 import { supabase } from '@/lib/supabase';
 
 interface CartContextValue {
@@ -9,7 +13,10 @@ interface CartContextValue {
   orderResult: OrderResult | null;
   lastAdded: { id: string; timestamp: number } | null;
   addToCart: (product: Product, selectedOption?: string) => void;
+<<<<<<< HEAD
   addTicketsWithSeats: (product: Product, seats: Seat[]) => void;
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
@@ -70,6 +77,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setLastAdded({ id: cartItemId, timestamp: Date.now() });
   }, []);
 
+<<<<<<< HEAD
   const addTicketsWithSeats = useCallback((product: Product, seats: Seat[]) => {
     const cartItemId = `${product.id}-seats`;
     setItems((prev) => {
@@ -88,6 +96,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setLastAdded({ id: cartItemId, timestamp: Date.now() });
   }, []);
 
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
   const removeFromCart = useCallback((id: string) => {
     setItems((prev) => prev.filter((item) => item.id !== id));
   }, []);
@@ -139,7 +149,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
             price: item.product.price,
             quantity: item.quantity,
             selectedOption: item.selectedOption || null,
+<<<<<<< HEAD
             seats: item.seats?.map((s) => ({ id: s.id, label: s.label, zone: s.zone })) || null,
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
           })),
           total,
           confirmation_code: confirmationCode,
@@ -154,6 +167,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
         if (error) throw error;
 
+<<<<<<< HEAD
         // Mark sold seats in the seats table
         const seatIds = items.flatMap((item) => item.seats?.map((s) => s.id) || []);
         if (seatIds.length > 0) {
@@ -165,6 +179,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
           if (seatError) throw seatError;
         }
 
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
         setOrderResult({
           id: data.id,
           confirmationCode,
@@ -201,7 +217,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
         orderResult,
         lastAdded,
         addToCart,
+<<<<<<< HEAD
         addTicketsWithSeats,
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
         removeFromCart,
         updateQuantity,
         clearCart,

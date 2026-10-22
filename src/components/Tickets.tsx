@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Plus, Check, Crown, Sparkles, Star, Armchair } from 'lucide-react';
 import { tickets } from '@/lib/products';
@@ -5,10 +6,18 @@ import { useCart } from '@/context/CartContext';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { SeatSelector } from '@/components/SeatSelector';
 import type { Product, Seat } from '@/types';
+=======
+import { Plus, Check, Crown, Sparkles, Star } from 'lucide-react';
+import { tickets } from '@/lib/products';
+import { useCart } from '@/context/CartContext';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import type { Product } from '@/types';
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 
 const tierStyles = [
   {
     icon: Crown,
+<<<<<<< HEAD
     border: 'border-teal-500/40',
     glow: 'card-glow-vip',
     badge: 'bg-teal-500 text-black',
@@ -17,6 +26,16 @@ const tierStyles = [
     accent: 'text-teal-400',
     dot: 'bg-teal-500',
     hoverBorder: 'hover-glow-teal',
+=======
+    border: 'border-amber-500/40',
+    glow: 'card-glow-vip',
+    badge: 'bg-amber-500 text-black',
+    button: 'gradient-amber text-black',
+    priceColor: 'text-amber-500',
+    accent: 'text-amber-500',
+    dot: 'bg-amber-500',
+    hoverBorder: 'hover-glow-amber',
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
   },
   {
     icon: Sparkles,
@@ -31,6 +50,7 @@ const tierStyles = [
   },
   {
     icon: Star,
+<<<<<<< HEAD
     border: 'border-sky-500/30',
     glow: '',
     badge: 'bg-sky-500/80 text-black',
@@ -39,10 +59,21 @@ const tierStyles = [
     accent: 'text-sky-300',
     dot: 'bg-sky-500',
     hoverBorder: 'hover-glow-cyan',
+=======
+    border: 'border-white/15',
+    glow: '',
+    badge: 'bg-white/15 text-white',
+    button: 'bg-white/10 text-white hover:bg-white/20 border border-white/20',
+    priceColor: 'text-white',
+    accent: 'text-gray-300',
+    dot: 'bg-gray-400',
+    hoverBorder: '',
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
   },
 ];
 
 export function Tickets() {
+<<<<<<< HEAD
   const { addTicketsWithSeats } = useCart();
   const { ref, visible } = useScrollReveal<HTMLDivElement>();
   const [seatSelectorProduct, setSeatSelectorProduct] = useState<Product | null>(null);
@@ -56,10 +87,18 @@ export function Tickets() {
       addTicketsWithSeats(seatSelectorProduct, seats);
     }
     setSeatSelectorProduct(null);
+=======
+  const { addToCart } = useCart();
+  const { ref, visible } = useScrollReveal<HTMLDivElement>();
+
+  const handleAdd = (product: Product) => {
+    addToCart(product);
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
   };
 
   return (
     <section id="tickets" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
       <div className="absolute inset-0 grid-pattern opacity-30" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full neon-blob-teal blur-3xl" />
 
@@ -71,6 +110,19 @@ export function Tickets() {
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             Selecciona tu tipo de entrada y elige tus asientos en el mapa interactivo. Tres niveles para una noche inolvidable.
+=======
+      <div className="absolute inset-0 grid-pattern opacity-20" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-amber-500/5 blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto">
+        <div className={`text-center mb-14 reveal ${visible ? 'reveal-visible' : ''}`} ref={ref}>
+          <span className="text-amber-500 text-sm font-bold tracking-widest uppercase">Entradas</span>
+          <h2 className="font-display text-5xl sm:text-6xl mt-2 mb-3">
+            ELIGE TU <span className="gradient-text">EXPERIENCIA</span>
+          </h2>
+          <p className="text-gray-400 max-w-xl mx-auto">
+            Tres niveles de acceso para una noche inolvidable. Selecciona el que mas se adapte a ti.
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
           </p>
         </div>
 
@@ -78,6 +130,10 @@ export function Tickets() {
           {tickets.map((ticket, index) => {
             const style = tierStyles[index];
             const Icon = style.icon;
+<<<<<<< HEAD
+=======
+            const isVIP = index === 0;
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 
             return (
               <div
@@ -101,6 +157,14 @@ export function Tickets() {
                   <div className={`absolute bottom-3 left-3 w-10 h-10 rounded-lg flex items-center justify-center ${style.badge}`}>
                     <Icon className="w-5 h-5" />
                   </div>
+<<<<<<< HEAD
+=======
+                  {isVIP && (
+                    <div className="absolute top-3 left-3 text-amber-500 animate-pulse-glow">
+                      <Crown className="w-6 h-6" fill="currentColor" />
+                    </div>
+                  )}
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 </div>
 
                 <h3 className="text-2xl font-bold mb-2">{ticket.name}</h3>
@@ -125,17 +189,26 @@ export function Tickets() {
                 </ul>
 
                 <button
+<<<<<<< HEAD
                   onClick={() => handleSelectSeats(ticket)}
                   className={`w-full py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.03] ${style.button}`}
                 >
                   <Armchair className="w-4 h-4" />
                   Elegir asientos
+=======
+                  onClick={() => handleAdd(ticket)}
+                  className={`w-full py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.03] ${style.button}`}
+                >
+                  <Plus className="w-4 h-4" />
+                  Agregar al carrito
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
                 </button>
               </div>
             );
           })}
         </div>
       </div>
+<<<<<<< HEAD
 
       {seatSelectorProduct && (
         <SeatSelector
@@ -144,6 +217,8 @@ export function Tickets() {
           onConfirm={handleConfirmSeats}
         />
       )}
+=======
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
     </section>
   );
 }

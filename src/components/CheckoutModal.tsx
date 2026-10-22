@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { X, ArrowLeft, ArrowRight, Loader2, User, Mail, Phone, AlertCircle, Armchair } from 'lucide-react';
+=======
+import { X, ArrowLeft, ArrowRight, Loader2, User, Mail, Phone, AlertCircle } from 'lucide-react';
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
 import { useCart } from '@/context/CartContext';
 import type { CustomerInfo } from '@/types';
 
@@ -56,8 +60,13 @@ export function CheckoutModal() {
         onClick={closeCheckout}
       />
 
+<<<<<<< HEAD
       <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto glass-strong rounded-2xl border border-teal-500/20 animate-scale-in">
         <div className="flex items-center justify-between p-5 border-b border-teal-500/15 sticky top-0 glass-strong z-10">
+=======
+      <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto glass-strong rounded-2xl border border-white/10 animate-scale-in">
+        <div className="flex items-center justify-between p-5 border-b border-white/10 sticky top-0 glass-strong z-10">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
           <button
             onClick={closeCheckout}
             className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium"
@@ -92,8 +101,13 @@ export function CheckoutModal() {
                 onChange={(e) => setInfo({ ...info, name: e.target.value })}
                 placeholder="Juan Perez"
                 className={`w-full pl-11 pr-4 py-3 rounded-xl bg-black/40 border ${
+<<<<<<< HEAD
                   errors.name ? 'border-red-500/50' : 'border-teal-500/15'
                 } text-white placeholder-gray-600 focus:outline-none focus:border-teal-500/50 transition-colors`}
+=======
+                  errors.name ? 'border-red-500/50' : 'border-white/10'
+                } text-white placeholder-gray-600 focus:outline-none focus:border-amber-500/50 transition-colors`}
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
               />
             </div>
             {errors.name && (
@@ -117,8 +131,13 @@ export function CheckoutModal() {
                 onChange={(e) => setInfo({ ...info, email: e.target.value })}
                 placeholder="juan@email.com"
                 className={`w-full pl-11 pr-4 py-3 rounded-xl bg-black/40 border ${
+<<<<<<< HEAD
                   errors.email ? 'border-red-500/50' : 'border-teal-500/15'
                 } text-white placeholder-gray-600 focus:outline-none focus:border-teal-500/50 transition-colors`}
+=======
+                  errors.email ? 'border-red-500/50' : 'border-white/10'
+                } text-white placeholder-gray-600 focus:outline-none focus:border-amber-500/50 transition-colors`}
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
               />
             </div>
             {errors.email && (
@@ -140,10 +159,17 @@ export function CheckoutModal() {
                 type="tel"
                 value={info.phone}
                 onChange={(e) => setInfo({ ...info, phone: e.target.value })}
+<<<<<<< HEAD
                 placeholder="+591 700 12345"
                 className={`w-full pl-11 pr-4 py-3 rounded-xl bg-black/40 border ${
                   errors.phone ? 'border-red-500/50' : 'border-teal-500/15'
                 } text-white placeholder-gray-600 focus:outline-none focus:border-teal-500/50 transition-colors`}
+=======
+                placeholder="+52 555 123 4567"
+                className={`w-full pl-11 pr-4 py-3 rounded-xl bg-black/40 border ${
+                  errors.phone ? 'border-red-500/50' : 'border-white/10'
+                } text-white placeholder-gray-600 focus:outline-none focus:border-amber-500/50 transition-colors`}
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
               />
             </div>
             {errors.phone && (
@@ -155,11 +181,16 @@ export function CheckoutModal() {
           </div>
 
           {/* Order summary */}
+<<<<<<< HEAD
           <div className="rounded-xl bg-black/30 border border-teal-500/10 p-4 space-y-2">
+=======
+          <div className="rounded-xl bg-black/30 border border-white/5 p-4 space-y-2">
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
               Resumen de tu orden
             </p>
             {items.map((item) => (
+<<<<<<< HEAD
               <div key={item.id} className="space-y-1">
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-gray-300 truncate pr-2">
@@ -185,6 +216,23 @@ export function CheckoutModal() {
             <div className="flex items-center justify-between font-bold">
               <span>Total</span>
               <span className="font-display text-2xl text-teal-400">${totalPrice}</span>
+=======
+              <div key={item.id} className="flex items-center justify-between text-sm">
+                <span className="text-gray-300 truncate pr-2">
+                  {item.product.name}
+                  {item.selectedOption && ` (${item.selectedOption})`}
+                  <span className="text-gray-500"> x{item.quantity}</span>
+                </span>
+                <span className="text-gray-400 flex-shrink-0">
+                  ${item.product.price * item.quantity}
+                </span>
+              </div>
+            ))}
+            <div className="h-px bg-white/10 my-2" />
+            <div className="flex items-center justify-between font-bold">
+              <span>Total</span>
+              <span className="font-display text-2xl text-amber-500">${totalPrice}</span>
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
             </div>
           </div>
 
@@ -198,7 +246,11 @@ export function CheckoutModal() {
           <button
             type="submit"
             disabled={isSubmitting}
+<<<<<<< HEAD
             className="w-full py-4 rounded-xl gradient-teal text-black font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform duration-200 shadow-lg shadow-teal-500/20 disabled:opacity-60 disabled:scale-100"
+=======
+            className="w-full py-4 rounded-xl gradient-amber text-black font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform duration-200 shadow-lg shadow-amber-500/20 disabled:opacity-60 disabled:scale-100"
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
           >
             {isSubmitting ? (
               <>
@@ -214,7 +266,11 @@ export function CheckoutModal() {
           </button>
 
           <p className="text-xs text-gray-600 text-center">
+<<<<<<< HEAD
             Al confirmar recibiras tu codigo QR con tus asientos para ingresar al evento.
+=======
+            Al confirmar recibiras tu codigo QR para ingresar al evento.
+>>>>>>> f01d0e6d3afe847a1424025f7e0bb14721c23e09
           </p>
         </form>
       </div>
